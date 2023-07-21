@@ -28,3 +28,7 @@ Route::middleware([
 
     route::get('/redirect',[HomeController::class,'redirect']);
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
